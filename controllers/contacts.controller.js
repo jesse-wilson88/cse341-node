@@ -1,4 +1,4 @@
-const personsName = (req, res) => {
+const contactName = (req, res) => {
   res.send("Barbara is my wife.");
 };
 
