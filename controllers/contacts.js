@@ -7,11 +7,28 @@
 const mongodb = require("../db/connect");
 
 const getAll = async (req, res) => {
-  const result = await mongodb.getDb().db().collection("contacts").find();
+  const result = await mongodb
+    .getDb()
+    .db("contacts")
+    .collection("contacts")
+    .find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists);
   });
 };
 
-module.exports = { getAll };
+const getSingle = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const result = await mongodb
+    .getDb()
+    .db("contacts")
+    .collection("contacts")
+    .find({ userId });
+  result.toArray().then((lists) => {
+    res.setHeader("Content-Type", "application/json");
+    res.status(200).json(lists);
+  });
+};
+
+module.exports = { getAll, getSingle };
