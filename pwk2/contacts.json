@@ -1,37 +1,37 @@
-{
-  "contact1": {
+[
+  {
     "firstName": "Barbara",
     "lastName": "Wilson",
     "email": "barbara@wilson.com",
     "favoriteColor": "Maroon",
     "birthday": "09/13/1971"
   },
-  "contact2": {
+  {
     "firstName": "Mariah",
     "lastName": "Wilson",
     "email": "mariah@wilson.com",
     "favoriteColor": "Burgundy",
     "birthday": "08/21/1990"
   },
-  "contact3": {
+  {
     "firstName": "Amanda",
     "lastName": "Wilson",
     "email": "amanda@wilson.com",
     "favoriteColor": "Pink",
     "birthday": "11/27/1991"
   },
-  "contact4": {
+  {
     "firstName": "Erica",
     "lastName": "Wilson",
     "email": "erica@wilson.com",
     "favoriteColor": "Yellow",
     "birthday": "04/07/1997"
   },
-  "contact5": {
+  {
     "firstName": "Jesse",
     "lastName": "Wilson",
     "email": "Jesse@wilson.com",
     "favoriteColor": "Grey",
     "birthday": "04/07/1997"
   }
-}
+]
