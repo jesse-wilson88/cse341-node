@@ -23,13 +23,22 @@ const getSingle = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
-    .db()
+    .db("contacts")
     .collection("contacts")
     .find({ _id: userId });
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists[0]);
   });
+
+  // const result = await mongodb
+  //   .getDb()
+  //   .db("contacts")
+  //   .collection("contacts")
+  //   // .find({ _id: userId });
+  //   .find({ _id: ObjectId(req.params.id) });
+  // res.setHeader("Content-Type", "application/json");
+  // res.status(200).json(result);
 };
 
 module.exports = { getAll, getSingle };
