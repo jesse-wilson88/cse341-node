@@ -5,5 +5,8 @@ GET http://localhost:8080/contacts
 ### Get contact by ID
 GET http://localhost:8080/contacts/632f54b365e5a614fe91cc0e
 
+### Get all contacts from Render
+GET https://jessewilson341-a1.onrender.com/contacts
 
-
+### Get contact by ID from Render
+GET https://jessewilson341-a1.onrender.com/contacts/632f54b365e5a614fe91cc0e
