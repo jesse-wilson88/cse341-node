@@ -4,8 +4,8 @@
 
 // module.exports = { contactName };
 
-const { ObjectId } = require("mongodb");
 const mongodb = require("../db/connect");
+const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
   const result = await mongodb
@@ -20,7 +20,7 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
-  const userId = new ObjectId(req.parmas.id);
+  const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
     .db("contacts")
@@ -30,6 +30,15 @@ const getSingle = async (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists[0]);
   });
+
+  // const result = await mongodb
+  //   .getDb()
+  //   .db("contacts")
+  //   .collection("contacts")
+  //   // .find({ _id: userId });
+  //   .find({ _id: ObjectId(req.params.id) });
+  // res.setHeader("Content-Type", "application/json");
+  // res.status(200).json(result);
 };
 
 module.exports = { getAll, getSingle };
