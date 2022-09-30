@@ -26,6 +26,7 @@ GET https://jessewilson341-a1.onrender.com/contacts/632f527f65e5a614fe911511
 
 ### Post new contact from Render
 POST https://jessewilson341-a1.onrender.com/contacts
+content-type: application/json
 
 {
   "firstName": "William",
