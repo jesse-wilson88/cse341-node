@@ -82,7 +82,21 @@ const updateContact = async (req, res) => {
 };
 
 const deleteContact = async (req, res) => {
-  res.send("Delete contact.");
+  const userId = new ObjectId(req.params.id);
+  const response = await mongodb
+    .getDb()
+    .db("contacts")
+    .collection("contacts")
+    .deleteOne({ _id: userId });
+  if (response.acknowledged) {
+    res.status(200).json(response);
+  } else {
+    res
+      .status(500)
+      .json(
+        response.error || "Some error occurred while deleting the contact."
+      );
+  }
 };
 
 module.exports = {

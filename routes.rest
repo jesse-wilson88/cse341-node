@@ -17,8 +17,8 @@ Content-Type: application/json
   "birthday": "12/30/2009"
 }
 
-### Update an exsiting contact
-PUT http://localhost:8080/contacts/63366f7261d4756dae24e3d3
+### Update an existing contact
+PUT http://localhost:8080/contacts/63375eda7bb30acdb39c499a
 Content-Type: application/json
 
 {
@@ -28,6 +28,10 @@ Content-Type: application/json
   "favoriteColor": "Purple",
   "birthday": "01/23/2019"
 }
+
+### Delete an existing contact
+DELETE http://localhost:8080/contacts/63375eda7bb30acdb39c499a
+
 
 // RENDER
 ### Get all contacts from Render
@@ -48,7 +52,7 @@ content-type: application/json
   "birthday": "12/30/2009"
 }
 
-### Update contact from Render
+### pdate an existing contact from Render
 PUT https://jessewilson341-a1.onrender.com/contacts/63366f7261d4756dae24e3d3
 Content-Type: application/json
 
