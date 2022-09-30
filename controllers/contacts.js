@@ -30,15 +30,44 @@ const getSingle = async (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists[0]);
   });
-
-  // const result = await mongodb
-  //   .getDb()
-  //   .db("contacts")
-  //   .collection("contacts")
-  //   // .find({ _id: userId });
-  //   .find({ _id: ObjectId(req.params.id) });
-  // res.setHeader("Content-Type", "application/json");
-  // res.status(200).json(result);
 };
 
-module.exports = { getAll, getSingle };
+const createContact = async (req, res) => {
+  const contact = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday,
+  };
+  const response = await mongodb
+    .getDb()
+    .db("contacts")
+    .collection("contacts")
+    .insertOne(contact);
+  if (response.acknowledged) {
+    res.status(201).json(response);
+  } else {
+    res
+      .status(500)
+      .json(
+        response.error || "Some error occurred while creating the contact."
+      );
+  }
+};
+
+const updateContact = async (req, res) => {
+  res.send("Update contact.");
+};
+
+const deleteContact = async (req, res) => {
+  res.send("Delete contact.");
+};
+
+module.exports = {
+  getAll,
+  getSingle,
+  createContact,
+  updateContact,
+  deleteContact,
+};
