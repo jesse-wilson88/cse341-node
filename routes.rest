@@ -17,6 +17,18 @@ Content-Type: application/json
   "birthday": "12/30/2009"
 }
 
+### Update an exsiting contact
+PUT http://localhost:8080/contacts/63366f7261d4756dae24e3d3
+Content-Type: application/json
+
+{
+  "firstName": "Dylan",
+  "lastName": "Liel",
+  "email": "dylan@liel.com",
+  "favoriteColor": "Purple",
+  "birthday": "01/23/2019"
+}
+
 // RENDER
 ### Get all contacts from Render
 GET https://jessewilson341-a1.onrender.com/contacts
@@ -34,4 +46,16 @@ content-type: application/json
   "email": "william@rice.com",
   "favoriteColor": "Red",
   "birthday": "12/30/2009"
+}
+
+### Update contact from Render
+PUT https://jessewilson341-a1.onrender.com/contacts/63366f7261d4756dae24e3d3
+Content-Type: application/json
+
+{
+  "firstName": "Dylan",
+  "lastName": "Liel",
+  "email": "dylan@liel.com",
+  "favoriteColor": "Purple",
+  "birthday": "01/23/2019"
 }
