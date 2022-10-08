@@ -4,7 +4,7 @@ const ObjectId = require("mongodb").ObjectId;
 const getAll = async (req, res) => {
   const result = await mongodb
     .getDb()
-    .db("contacts")
+    .db("cs_341_projects")
     .collection("contacts")
     .find();
   result.toArray().then((lists) => {
@@ -17,7 +17,7 @@ const getSingle = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
-    .db("contacts")
+    .db("cs_341_projects")
     .collection("contacts")
     .find({ _id: userId });
   result.toArray().then((lists) => {
@@ -36,7 +36,7 @@ const createContact = async (req, res) => {
   };
   const response = await mongodb
     .getDb()
-    .db("contacts")
+    .db("cs_341_projects")
     .collection("contacts")
     .insertOne(contact);
   if (response.acknowledged) {
@@ -61,7 +61,7 @@ const updateContact = async (req, res) => {
   };
   const response = await mongodb
     .getDb()
-    .db("contacts")
+    .db("cs_341_projects")
     .collection("contacts")
     .replaceOne({ _id: userId }, contact);
   if (response.acknowledged) {
@@ -79,7 +79,7 @@ const deleteContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()
-    .db("contacts")
+    .db("cs_341_projects")
     .collection("contacts")
     .remove({ _id: userId }, true);
   if (response.acknowledged) {
