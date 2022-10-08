@@ -1,0 +1,68 @@
+// LOCALHOST
+### Get all contacts
+GET http://localhost:8080/contacts
+
+### Get contact by ID
+GET http://localhost:8080/contacts/6338cca565e5a614fec271c3
+
+### Create a new contact
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Dominic",
+  "lastName": "Caravaggio",
+  "email": "dominic@caravaggio.com",
+  "favoriteColor": "Red",
+  "birthday": "11/14/1994"
+}
+
+### Update an existing contact
+PUT http://localhost:8080/contacts/633e7b2a30d2c9c43ca93c6b
+Content-Type: application/json
+
+{
+  "firstName": "Dominic",
+  "lastName": "Caravaggio",
+  "email": "dominic@caravaggio.com",
+  "favoriteColor": "Black",
+  "birthday": "11/14/1994"
+}
+
+### Delete an existing contact
+DELETE http://localhost:8080/contacts/633e7b2a30d2c9c43ca93c6b
+
+
+// RENDER
+### Get all contacts from Render
+GET https://jessewilson341-a1.onrender.com/contacts
+
+### Get contact by ID from Render
+GET https://jessewilson341-a1.onrender.com/contacts/6338cca565e5a614fec271c3
+
+### Post new contact from Render
+POST https://jessewilson341-a1.onrender.com/contacts
+content-type: application/json
+
+{
+  "firstName": "Dominic",
+  "lastName": "Caravaggio",
+  "email": "dominic@caravaggio.com",
+  "favoriteColor": "Red",
+  "birthday": "11/14/1994"
+}
+
+### Update an existing contact from Render
+PUT https://jessewilson341-a1.onrender.com/contacts/6341061c9da4f1c463273f30
+Content-Type: application/json
+
+{
+  "firstName": "Dominic",
+  "lastName": "Caravaggio",
+  "email": "dominic@caravaggio.com",
+  "favoriteColor": "Black",
+  "birthday": "11/14/1994"
+}
+
+### Delete an existing contact from Render
+DELETE https://jessewilson341-a1.onrender.com/contacts/6341061c9da4f1c463273f30

@@ -5,14 +5,18 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "",
+  "host": "localhost:8080",
   "basePath": "/",
-  "schemes": ["https", "http"],
+  "schemes": [
+    "http"
+  ],
   "paths": {
     "/contacts/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -61,7 +65,9 @@
     "/contacts/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
