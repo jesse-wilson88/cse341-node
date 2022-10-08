@@ -1,3 +1,4 @@
+const cors = require("cors");
 const router = require("express").Router();
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("../swagger-output.json");
