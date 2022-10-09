@@ -19,7 +19,7 @@ mongodb.initDb((err) => {
   } else {
     app.listen(port);
     console.log(
-      `Personal week 02: Connected to DB & listening on port ${port}`
+      `Personal week 04: Connected to DB & listening on port ${port}`
     );
   }
 });
